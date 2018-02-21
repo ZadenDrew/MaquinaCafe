@@ -7,20 +7,20 @@ import javax.swing.JOptionPane;
  * @author acabezaslopez
  */
 public class Display {
-    
+
     int az;
     //float credito;
 
     public Display() {
     }
-    
+
     public int verMenu() {
         System.out.println("\n\n\n*******-MENU-*******\n1)Introducir dinero\n2)Selección bebida\n3)Selección azúcar\n4)Devolver cambio\n5)Devolver crédito\n6)Salir\n");
         int op = Integer.parseInt(JOptionPane.showInputDialog("Selecciona la opción de menú: "));
         return op;
-        
+
     }
-    
+
     public String verBebida() {
         String bebida = null;
         System.out.println("\n\n*******-BEBIDAS-*******\n1)Expreso \n2)Café con leche \n3)Capuccino \n4)Manchiatto "
@@ -61,12 +61,12 @@ public class Display {
             case 11:
                 bebida = "Tila";
                 break;
-            
+
         }
         System.out.println("Ha elegido : " + bebida);
         return bebida;
     }
-    
+
     public void verAzucar(int az) {
         switch (az) {
             case 1:
@@ -85,24 +85,31 @@ public class Display {
                 System.out.println("Nivel de azúcar :\t" + (char) 27 + "[35;46m*****");
                 break;
         }
-        
+
     }
 
-    public void elabora() throws InterruptedException {
-        
+    /**
+     *
+     */
+    public void elabora() {
+
         System.out.println("\nProducto en proceso de elaboración..............\n");
-       // Maquina.prod.wait(20);
-        
+        // Maquina.prod.wait(20);
+
         System.out.println("Recoga su bebida, cuidado no se queme .\n");
-        
+
     }
-    
+/**
+ * 
+ */
     public void verCambio() {
         System.out.println(Dinero.getCambio() + "euros");
     }
-    
+/**
+ * 
+ */
     public void verCredito() {
         System.out.println(Dinero.getCredito() + "euros");
     }
-    
+
 }

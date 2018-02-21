@@ -21,6 +21,10 @@ public class Botonera {
     public Botonera() {
     }
 
+    /**
+     *
+     * @param op
+     */
     public void selMenu(int op) {
 
         switch (op) {
@@ -39,7 +43,7 @@ public class Botonera {
                 disp.verAzucar(azucar);
                 break;
             case 4:
-                cambio = euros.devolverCambio(credito,precio,otro);
+                cambio = euros.devolverCambio(credito, precio, otro);
                 disp.verCambio();
                 break;
             case 5:
@@ -53,6 +57,11 @@ public class Botonera {
 
     }
 
+    /**
+     *
+     * @param bebida
+     * @return
+     */
     public Producto seleccionBebida(String bebida) {
         for (int i = 0; i < producto.size(); i++) {
             if (producto.get(i).getNome().equalsIgnoreCase(bebida)) {
@@ -63,6 +72,10 @@ public class Botonera {
         return otro;
     }
 
+    /**
+     *
+     * @return
+     */
     public int añadirAzucar() {
         int cantidad = 0;
         String az;
